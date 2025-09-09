@@ -1,0 +1,8 @@
+requests
+selenium
+undetected-chromedriver
+Pillow
+pytesseract
+pyautogui
+beautifulsoup4
+fake-useragent

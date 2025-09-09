@@ -1,0 +1,99 @@
+(venv) PS C:\Users\yahia\Desktop\project_wsv> python .\project\main.py
+🚀 Starting Automation Attempt 1
+Message: session not created: cannot connect to chrome at 127.0.0.1:59539
+from session not created: This version of ChromeDriver only supports Chrome version 140
+Current browser version is 139.0.7258.155; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+        GetHandleVerifier [0x0x3dd283+66419]
+        GetHandleVerifier [0x0x3dd2c4+66484]
+        (No symbol) [0x0x1b4bd3]
+        (No symbol) [0x0x1efc48]
+        (No symbol) [0x0x1eec29]
+        (No symbol) [0x0x1e4e6f]
+        (No symbol) [0x0x1e4c96]
+        (No symbol) [0x0x22cce4]
+        (No symbol) [0x0x22c5ea]
+        (No symbol) [0x0x220e16]
+        (No symbol) [0x0x1f25ce]
+        (No symbol) [0x0x1f34a4]
+        GetHandleVerifier [0x0x625ec3+2461619]
+        GetHandleVerifier [0x0x620f46+2441270]
+        GetHandleVerifier [0x0x406222+234258]
+        GetHandleVerifier [0x0x3f61e8+168664]
+        GetHandleVerifier [0x0x3fd18d+197245]
+        GetHandleVerifier [0x0x3e55d8+100040]
+        GetHandleVerifier [0x0x3e5772+100450]
+        GetHandleVerifier [0x0x3cf72a+10266]
+        BaseThreadInitThunk [0x0x7596fcc9+25]
+        RtlGetAppContainerNamedObjectPath [0x0x779182ae+286]
+        RtlGetAppContainerNamedObjectPath [0x0x7791827e+238]
+        (No symbol) [0x0]
+
+Traceback (most recent call last):
+  File "C:\Users\yahia\Desktop\project_wsv\project\main.py", line 22, in run_automation_with_restart
+    driver = setup_selenium("")
+             ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yahia\Desktop\project_wsv\project\utils\browser.py", line 137, in setup_selenium
+    driver = uc.Chrome(options=options, use_subprocess=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yahia\Desktop\project_wsv\project\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 466, in __init__
+    super(Chrome, self).__init__(
+  File "C:\Users\yahia\Desktop\project_wsv\project\venv\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 47, in __init__
+    super().__init__(
+  File "C:\Users\yahia\Desktop\project_wsv\project\venv\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 69, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "C:\Users\yahia\Desktop\project_wsv\project\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 263, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\yahia\Desktop\project_wsv\project\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 724, in start_session
+    super(selenium.webdriver.chrome.webdriver.WebDriver, self).start_session(
+  File "C:\Users\yahia\Desktop\project_wsv\project\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\yahia\Desktop\project_wsv\project\venv\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\yahia\Desktop\project_wsv\project\venv\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: cannot connect to chrome at 127.0.0.1:59539
+from session not created: This version of ChromeDriver only supports Chrome version 140
+Current browser version is 139.0.7258.155; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+        GetHandleVerifier [0x0x3dd283+66419]
+        GetHandleVerifier [0x0x3dd2c4+66484]
+        (No symbol) [0x0x1b4bd3]
+        (No symbol) [0x0x1efc48]
+        (No symbol) [0x0x1eec29]
+        (No symbol) [0x0x1e4e6f]
+        (No symbol) [0x0x1e4c96]
+        (No symbol) [0x0x22cce4]
+        (No symbol) [0x0x22c5ea]
+        (No symbol) [0x0x220e16]
+        (No symbol) [0x0x1f25ce]
+        (No symbol) [0x0x1f34a4]
+        GetHandleVerifier [0x0x625ec3+2461619]
+        GetHandleVerifier [0x0x620f46+2441270]
+        GetHandleVerifier [0x0x406222+234258]
+        GetHandleVerifier [0x0x3f61e8+168664]
+        GetHandleVerifier [0x0x3fd18d+197245]
+        GetHandleVerifier [0x0x3e55d8+100040]
+        GetHandleVerifier [0x0x3e5772+100450]
+        GetHandleVerifier [0x0x3cf72a+10266]
+        BaseThreadInitThunk [0x0x7596fcc9+25]
+        RtlGetAppContainerNamedObjectPath [0x0x779182ae+286]
+        RtlGetAppContainerNamedObjectPath [0x0x7791827e+238]
+        (No symbol) [0x0]
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\yahia\Desktop\project_wsv\project\main.py", line 54, in <module>
+    run_automation_with_restart()
+  File "C:\Users\yahia\Desktop\project_wsv\project\main.py", line 47, in run_automation_with_restart
+    driver.quit()
+    ^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'quit'
+Exception ignored in: <function Chrome.__del__ at 0x000001C03CF4ACA0>
+Traceback (most recent call last):
+  File "C:\Users\yahia\Desktop\project_wsv\project\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 843, in __del__
+  File "C:\Users\yahia\Desktop\project_wsv\project\venv\Lib\site-packages\undetected_chromedriver\__init__.py", line 798, in quit
+OSError: [WinError 6] The handle is invalid
